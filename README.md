@@ -1,6 +1,8 @@
 # WhatsappAlwaysType
 Based on https://github.com/will/slacktyping
 
+# pre
+install pyautogui
 
 # Info
 Make sure a whatsapp web window with a chat is open
