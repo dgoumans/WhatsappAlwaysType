@@ -1,6 +1,8 @@
 # WhatsappAlwaysType
 Based on https://github.com/will/slacktyping
 
+![](https://github.com/dgoumans/WhatsappAlwaysType/blob/master/chat.gif)
+
 # pre
 install pyautogui
 
