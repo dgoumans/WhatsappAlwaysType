@@ -19,30 +19,24 @@ def setupCoordinates():
     ''' set region (left, top, width, and height '''
     GAME_REGION=(search_location[0],search_location[1]+search_location[3],smiley_location[0],smiley_location[1])
     print('Found region: ' + str(GAME_REGION))
-
-
-def typeNow():
-    print('Clicked "typing...", sending keystrokes now')
-    pyautogui.typewrite('aaaaa', interval=0.25)
-    print('Typing stopped, cleaning up')
-    pyautogui.hotkey('ctrl', 'a')
-    pyautogui.press('del')
-    print('Restarting monitor')    
-
-            
+         
 
 def startMonitor():
     while True:
         pos_white = pyautogui.locateOnScreen('typing_white.png', region=GAME_REGION)
         if pos_white is not None:
-            print('White typing found')
             pyautogui.click(pos_white)
-            typeNow()
+            time.sleep(0.1)
+            pyautogui.typewrite('aaaaaaaaaaaa', interval=0.3)
+            pyautogui.hotkey('ctrl','a')
+            pyautogui.press('delete')
         pos_grey = pyautogui.locateOnScreen('typing_grey.png', region=GAME_REGION)
         if pos_grey is not None:
-            print('Grey typing found')
             pyautogui.click(pos_grey)
-            typeNow()
+            time.sleep(0.1)
+            pyautogui.typewrite('aaaaaaaaaaaa', interval=0.3)
+            pyautogui.hotkey('ctrl','a')
+            pyautogui.press('delete')
 
 def main():
     count_down()
